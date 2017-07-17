@@ -57,4 +57,6 @@ set splitright
 "Powerful backspace
 set backspace=2
 
+"Add semicolon to end of line
+map ; $a;<Esc>
 
