@@ -14,6 +14,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'tpope/vim-surround'
 Plugin 'mattn/emmet-vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -30,6 +32,16 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 "
+
+"Show line numbers
+set number
+
+"Enable syntax highliting
+syntax enable
+
+"JSX Syntax for non .jsx files
+let g:jsx_ext_required = 0
+
 "Enable AutoSave on Vim startup
 let g:auto_save = 1 
 
