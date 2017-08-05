@@ -4,33 +4,16 @@ filetype off                  " required
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-" Plugin 'L9'
-" Git plugin not hosted on GitHub
 Plugin 'vim-scripts/vim-auto-save'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'tpope/vim-surround'
 Plugin 'mattn/emmet-vim'
-
-" git repos on your local machine (i.e. when working on your own plugin)
-"Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Install L9 and avoid a Naming conflict if you've already installed a
-" different version somewhere else.
-" Plugin 'ascenator/L9', {'name': 'newL9'}
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -46,7 +29,9 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-let g:auto_save = 1  " enable AutoSave on Vim startup
+"
+"Enable AutoSave on Vim startup
+let g:auto_save = 1 
 
 "Switch between splits naturally
 nnoremap <C-J> <C-W><C-J>
@@ -64,3 +49,9 @@ set backspace=2
 "Add semicolon to end of line
 map ; $a;<Esc>
 
+"CtrlP custom ignore
+set wildignore+=*/tmp/*,*.so,*.zip,*/bower_components/*,*/node_modules/*,*/ios/*,*/android/*,*/Packages/*,
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|ios\|\android\|Packages\|bower_components'
+
+"Tabs
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
