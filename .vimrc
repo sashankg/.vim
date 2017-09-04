@@ -18,7 +18,8 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'xuhdev/vim-latex-live-preview'
 Plugin 'cmugpi/vim-c0'
-
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -53,6 +54,14 @@ let g:auto_save = 1
 
 "CtrlP set to current directory
 let g:ctrlp_working_path_mode = 0
+
+"UltiSnips configuration
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
 
 "Switch between splits naturally
 nnoremap <C-J> <C-W><C-J>
