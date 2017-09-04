@@ -16,6 +16,9 @@ Plugin 'tpope/vim-surround'
 Plugin 'mattn/emmet-vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'xuhdev/vim-latex-live-preview'
+Plugin 'cmugpi/vim-c0'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -33,6 +36,9 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 "
 
+"Turn on auto-indent
+set autoindent
+
 "Show line numbers
 set number
 
@@ -44,6 +50,9 @@ let g:jsx_ext_required = 0
 
 "Enable AutoSave on Vim startup
 let g:auto_save = 1 
+
+"CtrlP set to current directory
+let g:ctrlp_working_path_mode = 0
 
 "Switch between splits naturally
 nnoremap <C-J> <C-W><C-J>
