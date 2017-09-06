@@ -1,0 +1,65 @@
+snippet 15151hw
+\documentclass[11pt]{article}
+%you can look for fun LaTeX packages to use here
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage[shortlabels]{enumitem}
+
+%fun commands for fun sets
+%make sure to use these in math mode
+\newcommand{\Zset}{\mathbb{Z}}
+\newcommand{\Rset}{\mathbb{R}}
+\newcommand{\Nset}{\mathbb{N}}
+
+%it may be helpful to make more commands for words/symbols you use often that you don't have to keep typing
+
+\oddsidemargin0cm
+\topmargin-2cm
+\textwidth16.5cm
+\textheight23.5cm
+
+\newcommand{\question}[2] {\vspace{.25in} \hrule\vspace{0.5em}
+\noindent{\bf #1 #2} \vspace{0.5em}
+\hrule \vspace{.10in}}
+\renewcommand{\part}[1] {\vspace{.10in} {\bf (#1)}}
+
+\newcommand{\myname}{Sashank Gogula}
+\newcommand{\myandrew}{sgogula}
+\newcommand{\myhwnum}{$1}
+\newcommand{\mycourse}{15-151 }
+\newcommand{\secnum}{D}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt plus 1pt}
+
+\pagestyle{fancyplain}
+\lhead{\fancyplain{}{\textbf{HW\myhwnum}}}      % Note the different brackets!
+\rhead{\fancyplain{}{\myname\\ \myandrew}}
+\chead{\fancyplain{}{\mycourse}}
+
+\begin{document}
+
+\medskip
+
+\thispagestyle{plain}
+\begin{center}
+{\Large 151/128 HW \myhwnum} \\
+\myname \\
+\myandrew \\
+\mycourse Section \secnum
+\end{center}
+
+$0
+
+\end{document}
+endsnippet
+
+snippet 15151hwquestion
+\question{Question $1: $2}
+
+$0
+
+\break
+endsnippet
